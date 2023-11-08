@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+class StudyFame {
+  private:
+    int a, b;
+  public:
+    void getData();
+    void swap_number();
+    void display();
+};
+void StudyFame::getData() {
+  cout << "Enter Two Numbers: ";
+  cin >> a >> b;
+}
+void StudyFame::swap_number() {
+  int temp;
+  temp = a;
+  a = b;
+  b = temp;
+}
+void StudyFame::display() {
+  cout << "a = " << a << " b = " << b << endl;
+}
+int main() {
+  StudyFame s;
+  s.getData();
+  cout << "Before swapping" << endl;
+  s.display();
+
+  s.swap_number();
+  cout << "After swapping" << endl;
+  s.display();
+  return 0;
+}
